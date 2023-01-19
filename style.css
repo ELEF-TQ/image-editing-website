@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background:#333 ;
+    
+}
+
+.container {
+    background: rgb(0, 0, 0);
+    width: 80vw;
+    height: 100vh;
+    margin: auto; /* centering container*/
+    padding: 20px;
+    border-radius: 20px;
+    display: grid;
+   
+    grid-template-columns: 5fr 3fr;
+}
+
+.container .img{
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+#img , canvas {
+    max-width: 80vh;
+    max-height: 80vh;
+}
+
+.img input{
+    display: none;
+}
+
+.img label{
+    color: aliceblue;
+    border: #fff dashed;
+    padding: 10px 20px;
+    cursor:pointer;
+    
+}
+.container .filter{
+    
+    direction: rtl;
+   
+}
+.filter ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+}
+.filter ul li{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.filter input {
+    max-width: 30vw;
+}
+
+.filter ul li label{
+    color: #fff;
+}
+
+.filter ul li:last-child{
+    
+    flex-direction: row;
+    justify-content: space-around;
+}
+.filter ul li a, .filter ul li span{
+    color: #fff;
+    padding: 10px 20px;
+    background: rgb(11, 11, 191);
+    cursor: pointer;
+    border-radius: 10px;
+    
+}
+.filter ul li a:hover, .filter ul li span:hover{
+    background-color: rgb(133, 133, 224);
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 50px;
+        height: 100%;
+    }
+    .filter{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+    }
+  }
+
+  @media screen and (max-width: 680px) {
+    #img , canvas{
+        max-width: 50vw;
+    }
+  }
